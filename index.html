@@ -6,33 +6,33 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Document</title>
+    <title>Portfolio-Taskov</title>
 </head>
 <body>
     <div class="site-wrapper">
         <header class="site-header">
             <div class="title-wrapper">
-                    <h2>Hi, my name is <span>Marian Taskov</span> </h2>
-                    <p>I'm a web developer</p>
-                    <div class="button-wrapper">
-                        <a href="#" type="button">View my work <span><i class="fa fa-arrow-right"></i></span>  </i> </a>
-                    </div>
+                <h2>Hi, my name is <span>Marian Taskov</span> </h2>
+                <p>I'm a web developer</p>
+                <div class="button-wrapper">
+                    <a href="#" type="button">View my work <span><i class="fa fa-arrow-right"></i></span>  </i> </a>
                 </div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
             </div>
+                <div class="box-header"></div>
+                <div class="box-header"></div>
+                <div class="box-header"></div>
+                <div class="box-header"></div>
+                <div class="box-header"></div>
+                <div class="box-header"></div>
+                <div class="box-header"></div>
+                <div class="box-header"></div>
+                <div class="box-header"></div>
+                <!-- <div class="box-header"></div> -->
+            <!-- </div> -->
         </header>
         <main class="site-main">
             <section class="about-section">
-                <header class="about-section">
+                <header class="about-section-header">
                     <h3 class="section-title">About</h3>
                 </header>
                 <article class="about-article">
@@ -133,7 +133,7 @@
                             <div class="arrow right-top"></div>
                         </div>
                         <div class="text-inf0">
-                            <h3>Who em I</h3>
+                            <h3>Who am I</h3>
                         </div>
                     </div>
                 </article>
@@ -143,17 +143,60 @@
                     <h3 class="section-title">My Work</h3>
                     <nav class="section-navi">
                         <ul class="work-category">
-                            <li> <a href="">All</a> </li>
-                            <li> <a href="">WordPress</a> </li>
-                            <li> <a href="">Html/Css</a> </li>
-                            <li> <a href="">JavaScript</a> </li>
+                            <li> <a type="button" class="type-of-work" value="all">All</a> </li>
+                            <li> <a type="button" class="type-of-work" value="wp">WordPress</a> </li>
+                            <li> <a type="button" class="type-of-work" value="html">Html/Css</a> </li>
+                            <li> <a type="button" class="type-of-work" value="js">JavaScript</a> </li>
                         </ul>
                     </nav>
                 </header>
-                <article class="work-article"></article>
+                <article class="work-article">
+                    <div class="work-wrapper">
+                        <div class="work-container js">
+                            <img src="./images/work-img/angular.jpg" alt="">
+                        </div>
+                        <div class="work-container js">
+                            <img src="./images/work-img/react.jpg" alt="">
+                        </div>
+                        <div class="work-container js">
+                            <img src="./images/work-img/vue.jpg" alt="">
+                        </div>
+                        <div class="work-container wp">
+                            <img src="./images/work-img/wp-store.jpg" alt="">
+                        </div>
+                        <div class="work-container wp">
+                            <img src="./images/work-img/wp-alex.jpg" alt="">
+                        </div>
+                        <div class="work-container wp">
+                            <img src="./images/work-img/wp-exer.jpg" alt="">
+                        </div>
+                        <div class="work-container html">
+                            <img src="./images/work-img/xd-img1.jpg" alt="">
+                        </div>
+                        <div class="work-container html">
+                            <img src="./images/work-img/xd-img2.jpg" alt="">
+                        </div>
+                        <div class="work-container html">
+                            <img src="./images/work-img/dog-site.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                </article>
             </section>
             
         </main>
+        <footer class="site-footer">
+            <div class="box-footer"></div>
+            <div class="box-footer"></div>
+            <div class="box-footer"></div>
+            <div class="box-footer"></div>
+            <div class="box-footer"></div>
+            <div class="box-footer"></div>
+            <div class="box-footer"></div>
+            <div class="box-footer"></div>
+            <div class="box-footer"></div>
+            <div class="box-footer"></div>
+        </footer>
 </body>
 <script src="scripts.js" type="module"></script>
 </html>
