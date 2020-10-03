@@ -130,17 +130,63 @@ body {
     }
 
     .skill {
-        width: 300px;
-        height: 20px;
+        width: 400px;
+        height: 30px;
         // border: 1px solid black;
-        margin-top: 20px;
-        background-color: rgba(0,212,255,1);
+        margin-bottom: 20px;
+        // background-color: rgba(0,212,255,1);
         position: relative;
+        display: flex;
+        align-items: center;
 
-        span {
+        &::before {
+            display: block;
+            content: '';
+            height: 100%;
+            // width: 80%;
+            background-color:rgba(0,212,255,1);
+            border-radius: 2px;
+            // box-shadow: 0 0 5px black;
+        }
+
+        &.html::before {
+            width: 80%;
+            transition: width 0.3s linear;
+        }
+        &.css::before {
+            width: 80%;
+        }
+        &.javascript::before {
+            width: 70%;
+        }
+        &.angular::before {
+            width: 40%;
+        }
+        &.react::before {
+            width: 60%;
+        }
+        &.vue::before {
+            width: 60%;
+        }
+        &.node::before {
+            width: 50%;
+        }
+        &.wp::before {
+            width: 70%;
+        }
+
+        // &:hover::before {
+        //     width: ;
+        // }
+
+        span.type {
             position: absolute;
-            top: 0;
-            left: 110%;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+        span.percentage {
+            margin-left: 10px;
         }
     }
     .img-wrapper {
@@ -150,6 +196,7 @@ body {
     }
     .img-container {
         position: relative;
+        height: 90%;
         // width: 240px;
         // height: 240px;
        

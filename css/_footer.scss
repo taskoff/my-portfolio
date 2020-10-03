@@ -1,5 +1,112 @@
 .site-footer {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 600px;
+}
+
+.footer-areas-container {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    color:  #F5F5F5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    // padding-top: 50px;
+    // align-items: center;
+    
+
+    .label-input-container {
+        margin-bottom: 10px;
+    }
+
+    input,
+    label {
+        display: block;
+    }
+
+    .footer-label {
+        font-size: 20px;
+    }
+    .footer-input,
+    .footer-textarea {
+        width: 400px;
+        border-radius: 3px;
+        outline: none;
+        background-color:  #F2F2F2;
+    }
+    .footer-input{
+        line-height: 28px;
+    }
+    .footer-textarea {
+        height: 150px;
+    }
+
+    .button {
+        display: block;
+        width: 50px;
+        padding: 10px 30px;
+        background-color: transparent;
+        color:  #F5F5F5;
+        border: 2px solid  #F5F5F5;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+    }
+.contact-wrapper {
+
+    
+}
+
+    .icons-wrapper {
+        display: flex;
+        margin-top: 10px;
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            margin-right: 20px;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 0 5px black;
+            }
+
+            &.link {
+                border-radius: 5px;
+            }
+            &.git {
+                padding: 2px;
+                border-radius: 50%;
+            }
+    
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .phone, .address, .email {
+        margin-top: 20px;
+        font-size: 20px;
+        display: flex;
+        p {
+            margin-left: 20px;
+        }
+    }
+    .address {
+        margin-bottom: 20px;
+    }
+    .map {
+        width: 100%;
+        iframe {
+            border-radius: 3px;
+        }
+    }
+
+
+
+
 }

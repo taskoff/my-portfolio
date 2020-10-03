@@ -11,8 +11,8 @@
 }
     
 .slider-container {
-    max-width: 195px;
-    height: 295px;
+    max-width: 230px;
+    height: 330px;
     margin: auto;
     padding: 20px;
     position: relative;
@@ -34,7 +34,7 @@
 
     .link-wrapper {
         position: absolute;
-        bottom: 10px;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;

@@ -82,7 +82,125 @@
 .site-footer {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
+}
+
+.footer-areas-container {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  color: #F5F5F5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-areas-container .label-input-container {
+  margin-bottom: 10px;
+}
+
+.footer-areas-container input,
+.footer-areas-container label {
+  display: block;
+}
+
+.footer-areas-container .footer-label {
+  font-size: 20px;
+}
+
+.footer-areas-container .footer-input,
+.footer-areas-container .footer-textarea {
+  width: 400px;
+  border-radius: 3px;
+  outline: none;
+  background-color: #F2F2F2;
+}
+
+.footer-areas-container .footer-input {
+  line-height: 28px;
+}
+
+.footer-areas-container .footer-textarea {
+  height: 150px;
+}
+
+.footer-areas-container .button {
+  display: block;
+  width: 50px;
+  padding: 10px 30px;
+  background-color: transparent;
+  color: #F5F5F5;
+  border: 2px solid  #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+}
+
+.footer-areas-container .icons-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-areas-container .icons-wrapper .icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.footer-areas-container .icons-wrapper .icon-box:hover {
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
+}
+
+.footer-areas-container .icons-wrapper .icon-box.link {
+  border-radius: 5px;
+}
+
+.footer-areas-container .icons-wrapper .icon-box.git {
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.footer-areas-container .icons-wrapper .icon-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-areas-container .phone, .footer-areas-container .address, .footer-areas-container .email {
+  margin-top: 20px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-areas-container .phone p, .footer-areas-container .address p, .footer-areas-container .email p {
+  margin-left: 20px;
+}
+
+.footer-areas-container .address {
+  margin-bottom: 20px;
+}
+
+.footer-areas-container .map {
+  width: 100%;
+}
+
+.footer-areas-container .map iframe {
+  border-radius: 3px;
 }
 
 .slider-main {
@@ -95,8 +213,8 @@
 }
 
 .slider-container {
-  max-width: 195px;
-  height: 295px;
+  max-width: 230px;
+  height: 330px;
   margin: auto;
   padding: 20px;
   position: relative;
@@ -114,7 +232,7 @@
 
 .slider-container .link-wrapper {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -564,17 +682,70 @@ a {
 }
 
 .about-section .skill {
-  width: 300px;
-  height: 20px;
-  margin-top: 20px;
-  background-color: #00d4ff;
+  width: 400px;
+  height: 30px;
+  margin-bottom: 20px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about-section .skill span {
+.about-section .skill::before {
+  display: block;
+  content: '';
+  height: 100%;
+  background-color: #00d4ff;
+  border-radius: 2px;
+}
+
+.about-section .skill.html::before {
+  width: 80%;
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+}
+
+.about-section .skill.css::before {
+  width: 80%;
+}
+
+.about-section .skill.javascript::before {
+  width: 70%;
+}
+
+.about-section .skill.angular::before {
+  width: 40%;
+}
+
+.about-section .skill.react::before {
+  width: 60%;
+}
+
+.about-section .skill.vue::before {
+  width: 60%;
+}
+
+.about-section .skill.node::before {
+  width: 50%;
+}
+
+.about-section .skill.wp::before {
+  width: 70%;
+}
+
+.about-section .skill span.type {
   position: absolute;
-  top: 0;
-  left: 110%;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.about-section .skill span.percentage {
+  margin-left: 10px;
 }
 
 .about-section .img-wrapper {
@@ -587,6 +758,7 @@ a {
 
 .about-section .img-container {
   position: relative;
+  height: 90%;
 }
 
 .about-section .img-container .arrow {
