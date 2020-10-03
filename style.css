@@ -213,8 +213,8 @@
 }
 
 .slider-container {
-  max-width: 230px;
-  height: 330px;
+  max-width: 250px;
+  height: 350px;
   margin: auto;
   padding: 20px;
   position: relative;
@@ -232,11 +232,11 @@
 
 .slider-container .link-wrapper {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  z-index: 1;
+  z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,11 +314,14 @@
 }
 
 .slider-container.first .img-box {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -329,9 +332,9 @@
 }
 
 .slider-container.first img {
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .bullets-container-first {
@@ -555,6 +558,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: -webkit-gradient(linear, left top, right top, from(#020001), color-stop(35%, #090979), to(#00d4ff));
   background: linear-gradient(90deg, #020001 0%, #090979 35%, #00d4ff 100%);
@@ -627,6 +634,7 @@ a {
 }
 
 .my-work .work-article {
+  min-height: 500px;
   margin-top: 20px;
 }
 
@@ -681,8 +689,8 @@ a {
       grid-template-columns: 1fr 1fr 1fr;
 }
 
-.about-section .skill {
-  width: 400px;
+.about-section .skill-box .skill {
+  width: 450px;
   height: 30px;
   margin-bottom: 20px;
   position: relative;
@@ -692,51 +700,63 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
+  -webkit-box-shadow: 0 0 1px black;
+          box-shadow: 0 0 1px black;
 }
 
-.about-section .skill::before {
+.about-section .skill-box .skill::before {
   display: block;
   content: '';
   height: 100%;
+  width: 0;
   background-color: #00d4ff;
   border-radius: 2px;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
 }
 
-.about-section .skill.html::before {
+.about-section .skill-box .skill.show span {
+  display: block;
+}
+
+.about-section .skill-box .skill.html.show::before {
   width: 80%;
-  -webkit-transition: width 0.3s linear;
-  transition: width 0.3s linear;
 }
 
-.about-section .skill.css::before {
+.about-section .skill-box .skill.css.show::before {
   width: 80%;
 }
 
-.about-section .skill.javascript::before {
+.about-section .skill-box .skill.javascript.show::before {
   width: 70%;
 }
 
-.about-section .skill.angular::before {
+.about-section .skill-box .skill.angular.show::before {
   width: 40%;
 }
 
-.about-section .skill.react::before {
+.about-section .skill-box .skill.react.show::before {
   width: 60%;
 }
 
-.about-section .skill.vue::before {
+.about-section .skill-box .skill.vue.show::before {
   width: 60%;
 }
 
-.about-section .skill.node::before {
+.about-section .skill-box .skill.node.show::before {
   width: 50%;
 }
 
-.about-section .skill.wp::before {
+.about-section .skill-box .skill.wp.show::before {
   width: 70%;
 }
 
-.about-section .skill span.type {
+.about-section .skill-box .skill span {
+  display: none;
+}
+
+.about-section .skill-box .skill span.type {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -744,7 +764,7 @@ a {
           transform: translateY(-50%);
 }
 
-.about-section .skill span.percentage {
+.about-section .skill-box .skill span.percentage {
   margin-left: 10px;
 }
 

@@ -40,15 +40,18 @@ showWorkCategories()
 
 
 let position = 0;
+const el = document.querySelectorAll('.skill');
 
-
-// window.addEventListener('scroll', checkPosition);
+window.addEventListener('scroll', checkPosition);
 
 
 function doSomething(position) {
-    if (position > 500) {
+    if (position > 400) {
         console.log('We are here.......')
-        
+        el.forEach(e=>{
+            // e.classList.remove('hidden')
+            e.classList.add('show')
+        })
     }
 }
 
