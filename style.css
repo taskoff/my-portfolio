@@ -44,7 +44,8 @@
 
 .main-navigation .navi-button {
   width: 80px;
-  margin: auto;
+  margin: 0 auto;
+  margin-top: -2px;
   background-color: #525252;
   color: #F5F5F5;
   text-transform: uppercase;
@@ -280,57 +281,18 @@
 }
 
 .slider-container {
-  max-width: 250px;
-  height: 350px;
-  margin: auto;
-  padding: 20px;
   position: relative;
+  width: 300px;
+  height: 430px;
   border: 2px solid grey;
   -webkit-box-shadow: 0 0 5px black;
           box-shadow: 0 0 5px black;
   overflow: hidden;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 0.5s ease-out;
-  transition: -webkit-transform 0.5s ease-out;
-  transition: transform 0.5s ease-out;
-  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
-}
-
-.slider-container .link-wrapper {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 200;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #7a001d;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-}
-
-.slider-container .link-wrapper a {
-  color: white;
-  padding: 5px 10px;
-}
-
-.slider-container .link-wrapper:hover {
-  opacity: 1;
 }
 
 .slider-container .cert-type {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -344,7 +306,8 @@
 
 .slider-container .cert-type p {
   color: #525252;
-  font-size: 50px;
+  font-size: 45px;
+  font-weight: bold;
 }
 
 .slider-container.first:hover .cert-type {
@@ -353,14 +316,6 @@
 
 .slider-container.first:hover .arrow {
   opacity: 0.4;
-}
-
-.slider-container.first:hover .link-wrapper {
-  opacity: 0.4;
-}
-
-.slider-container.first .link-wrapper:hover {
-  opacity: 1;
 }
 
 .slider-container.first .arrow {
@@ -404,14 +359,7 @@
 }
 
 .slider-container.first .img-box {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  overflow: hidden;
+  position: relative;
   opacity: 0;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -421,10 +369,48 @@
   opacity: 1;
 }
 
-.slider-container.first img {
-  width: 100%;
-  height: 100%;
+.slider-container.first .img-box .link-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 350px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #7a001d;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  z-index: 1;
+}
+
+.slider-container.first .img-box .link-wrapper a {
+  color: white;
+  padding: 5px 10px;
+}
+
+.slider-container.first .img-box .link-wrapper:hover {
+  opacity: 1;
+}
+
+.slider-container.first .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slider-container.first:hover .link-wrapper {
+  opacity: 0.4;
 }
 
 .bullets-container-first {
@@ -720,7 +706,7 @@ a {
 }
 
 .about-section .skill-box .skill {
-  width: 450px;
+  width: 400px;
   height: 30px;
   margin-bottom: 20px;
   position: relative;
@@ -801,8 +787,8 @@ a {
 .about-section .img-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 70% 30%;
-      grid-template-rows: 70% 30%;
+  -ms-grid-rows: 60% 40%;
+      grid-template-rows: 60% 40%;
   justify-items: center;
 }
 

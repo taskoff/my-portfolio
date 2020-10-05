@@ -22,10 +22,10 @@ addClickListener(elements.links);
 
 function showCategory(e){
         const projects = document.querySelectorAll('.work-container');
-        elements.links.forEach(e=>{
-            e.classList.remove('active');
-        })
         if(e){
+            elements.links.forEach(e=>{
+                e.classList.remove('active');
+        })
             e.target.classList.add('active');
         }
         projects.forEach(e=>e.classList.add('hidden'));

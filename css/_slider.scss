@@ -11,45 +11,19 @@
 }
     
 .slider-container {
-    max-width: 250px;
-    height: 350px;
-    margin: auto;
-    padding: 20px;
     position: relative;
+    width: 300px;
+    height: 430px;
     border: 2px solid grey;
     box-shadow: 0 0 5px black;
     overflow: hidden;
     
 
-    transform: scale(1);
-    transition: transform 0.5s ease-out;
-
-    .link-wrapper {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 200;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color:#7a001d;
-        opacity: 0;
-        transition: opacity 0.3s linear;
-
-        a {
-            color: white;
-            padding: 5px 10px;
-        }
-
-        &:hover {
-            opacity: 1;
-        }
-    }
+    
 
     .cert-type {
         position: absolute;
-        top: 20px;
+        top: 10px;
         left: 50%;
         transform: translateX(-50%);
         opacity: 1;
@@ -60,7 +34,8 @@
 
         p {
             color:  #525252;
-            font-size: 50px;
+            font-size: 45px;
+            font-weight: bold;
         }
     }
 
@@ -73,15 +48,9 @@
         &:hover .arrow {
             opacity: 0.4;
         }
-        &:hover .link-wrapper {
-            opacity: 0.4;
-        }
-
-        .link-wrapper:hover {
-            opacity: 1;
-        }
-
-            .arrow {
+        
+        
+        .arrow {
             position: absolute;
             top: 40%;
             width: 50px;
@@ -111,32 +80,61 @@
                 &.hidden {
                     display: none;
                 }
-            }
+        }
         
 
         .img-box {
-            width:100%;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            overflow: hidden;
+           
+            position: relative; 
+            
+
+            
             opacity: 0;
             transition: opacity 0.5s;
             &.active {
                 opacity: 1;
             }
+
+            
+    
+            .link-wrapper {
+                position: absolute;
+                left: 50%;
+                top: 350px;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:#7a001d;
+                opacity: 0;
+                transition: opacity 0.3s linear;
+                z-index: 1;
+        
+                a {
+                    color: white;
+                    padding: 5px 10px;
+                }
+        
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+          
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;            
+                display: block;
+                width: 100%;
+                height: auto;
+               
+            }
+        }
+        &:hover .link-wrapper {
+            opacity: 0.4;
         }
 
-        img {
-            width: 100%;
-            height: 100%;
-            
-            display: block;
-            // width: 100%;
-            // height: 100%;
-        }
 
        
     }
