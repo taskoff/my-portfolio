@@ -47,9 +47,28 @@
         }
     }
 
+    .cert-type {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        z-index: 400;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s;
 
+        p {
+            color:  #525252;
+            font-size: 50px;
+        }
+    }
 
     &.first {
+
+        &:hover .cert-type{
+            opacity: 1;
+        }
 
         &:hover .arrow {
             opacity: 0.4;

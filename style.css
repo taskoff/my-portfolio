@@ -143,6 +143,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 5px;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+
+.footer-areas-container .button:hover {
+  background-color: #FFBF00;
 }
 
 .footer-areas-container .icons-wrapper {
@@ -258,6 +264,29 @@
 }
 
 .slider-container .link-wrapper:hover {
+  opacity: 1;
+}
+
+.slider-container .cert-type {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 1;
+  z-index: 400;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.slider-container .cert-type p {
+  color: #525252;
+  font-size: 50px;
+}
+
+.slider-container.first:hover .cert-type {
   opacity: 1;
 }
 
@@ -379,7 +408,8 @@
 }
 
 .box-header,
-.box-footer {
+.box-footer,
+.box-middle {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -455,6 +485,41 @@
   right: 50px;
   -webkit-animation: rotate 12s linear infinite;
           animation: rotate 12s linear infinite;
+}
+
+.box-middle:nth-child(2) {
+  top: 50px;
+  left: 200px;
+  -webkit-animation: rotate 6s linear infinite;
+          animation: rotate 6s linear infinite;
+}
+
+.box-middle:nth-child(3) {
+  top: 50px;
+  right: 300px;
+  -webkit-animation: rotate 8s linear infinite;
+          animation: rotate 8s linear infinite;
+}
+
+.box-middle:nth-child(4) {
+  top: 120px;
+  left: 600px;
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+}
+
+.box-middle:nth-child(5) {
+  top: 180px;
+  right: 200px;
+  -webkit-animation: rotate 6s linear infinite;
+          animation: rotate 6s linear infinite;
+}
+
+.box-middle:nth-child(1) {
+  top: 80px;
+  right: 100px;
+  -webkit-animation: rotate 8s linear infinite;
+          animation: rotate 8s linear infinite;
 }
 
 .box-footer:nth-child(2) {
@@ -745,6 +810,7 @@ a {
 .midle-section {
   height: 200px;
   margin: 0 30px;
+  position: relative;
 }
 
 .midle-section .add-wrapper {

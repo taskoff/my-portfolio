@@ -4,60 +4,71 @@ import {firstSliderInit} from './scripts/slider.js';
 
 firstSliderInit();
 
-function showWorkCategories(){
-    const links = document.querySelectorAll('.type-of-work');
-    links.forEach(e=>e.addEventListener('click', showCategory));
-    const projects = document.querySelectorAll('.work-container');
 
-    function showCategory(e){
-        links.forEach(e=>{
+const elements = {
+    links : document.querySelectorAll('.type-of-work'),
+    elSkill : document.querySelectorAll('.skill')
+}
+
+let isShowCategories = false;
+
+
+function addClickListener(el){
+    el.forEach(e=>e.addEventListener('click', showCategory));
+}
+addClickListener(elements.links);
+
+
+
+function showCategory(e){
+        const projects = document.querySelectorAll('.work-container');
+        elements.links.forEach(e=>{
             e.classList.remove('active');
         })
-        e.target.classList.add('active');
+        if(e){
+            e.target.classList.add('active');
+        }
         projects.forEach(e=>e.classList.add('hidden'));
-        const cls = e.target.getAttribute('value');
+        let cls = 'all';
+        if(e) {
+
+           cls = e.target.getAttribute('value');
+        }
 
         setTimeout(()=>{
             projects.forEach(e=>{
                 if(cls==='all'){
                     e.classList.remove('hidden');
-                    
+                    isShowCategories = true;
+
                 }else if(!e.className.includes(cls)) {
                     e.classList.add('hidden');
-                    
+
                 } else {
                     e.classList.remove('hidden');
-                    
+
                 };
             })
         }, 300)
-
-        
-        
-    }
 }
-showWorkCategories()
 
 
 let position = 0;
-const el = document.querySelectorAll('.skill');
-
 window.addEventListener('scroll', checkPosition);
 
+function checkPosition(){
+    position = window.scrollY;
+    visibleElementsWithPosition(position)
+}
 
-function doSomething(position) {
-    if (position > 400) {
-        console.log('We are here.......')
-        el.forEach(e=>{
-            // e.classList.remove('hidden')
+function visibleElementsWithPosition(p) {
+    if (p > 400 && p < 800) {
+        elements.elSkill.forEach(e=>{
             e.classList.add('show')
         })
     }
+    if(p > 1000 && !isShowCategories) {
+        showCategory()
+    }
 }
 
-
-function checkPosition(){
-    console.log(window.scrollY)
-    position = window.scrollY;
-    doSomething(position)
-}
