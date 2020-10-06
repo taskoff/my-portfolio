@@ -7,10 +7,14 @@ let isShowCategories = false;
 const activeCls = 'active';
 const hiddenCls = 'hidden';
 
-function addClickListener(el){
-    el.forEach(e=>e.addEventListener('click', showCategory));
+function addClickListener(el, func){
+    if (Array.isArray(el)) {
+        el.forEach(e=>e.addEventListener('click', func));
+    } else {
+        el.addEventListener('clic', func);
+    }
 };
-addClickListener(elements.links);
+addClickListener([...elements.links], showCategory);
 
 
 
@@ -67,5 +71,6 @@ function visibleElementsWithPosition(p) {
 };
 
 export {
-    checkPosition
+    checkPosition,
+    addClickListener
 }

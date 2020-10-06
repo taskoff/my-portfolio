@@ -292,20 +292,20 @@
             <!-- <div class="box-footer"></div> -->
             <div class="footer-areas-container">
                 <div class="form-wraper">
-                    <form action="">
+                    <form action="mailto:tasmanian7403@abv.bg" method="post" enctype="text/plain">
                         <div class="label-input-container">
                             <label for="name" class="footer-label">Name</label>
-                            <input type="text" class="footer-input">
+                            <input type="text" class="footer-input name">
                         </div>
                         <div class="label-input-container">
                             <label for="email" class="footer-label">Email</label>
-                            <input type="email" class="footer-input">
+                            <input type="email" class="footer-input f-email">
                         </div>
                         <div class="label-input-container" >
                             <label for="text" class="footer-label">Message</label>
-                            <textarea name="text" id="text" class="footer-textarea"></textarea>
+                            <textarea name="text" id="text" class="footer-textarea text"></textarea>
                         </div>
-                        <a href="#" class="button">Send</a>
+                        <input type="button" value="Send" class="footer-form-button">
                     </form>
                 </div>
                 <div class="contacts-wrapper">
@@ -345,4 +345,5 @@
         </footer>
 </body>
 <script src="scripts.js" type="module"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 </html>
