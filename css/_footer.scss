@@ -112,3 +112,29 @@
 
 
 }
+
+// ================================== Responsive ===========================
+
+
+@media(max-width: 600px){
+    .footer-areas-container {
+        display: block;
+        width: 80%;
+        margin: 30px auto;
+
+        .footer-input,
+        .footer-textarea {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: 360px){
+    .map {
+        width: 100%;
+        iframe {
+            border-radius: 3px;
+            width: 250px;
+        }
+    }
+}

@@ -169,23 +169,45 @@
                 
             }
         }
-        // &.bullet-0 {
-        //     &::before {
-        //         content: 'D';
-        //     }
-        // }
-        // &.bullet-1 {
-        //     &::before {
-        //         content: '';
-        //         background-image: url('../images/wordpress-logo.png');
-        //         background-size: contain;
-        //         // background-color: yellow;
-        //     }
-        // }
 
     }
 
 
+}
+
+
+// ============================ Responsive Slider =============================
+
+
+@media (max-width:600px) {
+    .slider-container {
+        // width: 250px;
+        // height: 350px;
+        &.first {
+            .arrow {
+                opacity: 1;
+            }
+            .img-box {
+                .link-wrapper {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 320px){
+    .slider-container {
+        width: 250px;
+        height: 350px;
+    }
+    .first {
+        .img-box {
+            .link-wrapper {
+               top: 300px;
+            }
+        }
+    }
 }
 
 
