@@ -18,7 +18,7 @@
         justify-content: space-around;
         align-items: center;
         list-style: none;
-        background-color: #525252;
+        background-color:$grey-200;
         padding: 20px 0;    
         a{
             font-size: 20px;
@@ -35,7 +35,7 @@
         width: 80px;
         margin: 0 auto;
         margin-top: -2px;
-        background-color: #525252;
+        background-color:$grey-200;
         color: #F5F5F5;
         text-transform: uppercase;
         text-align: center;
@@ -64,7 +64,7 @@
    h2 {
        font-size: 50px;
        span {
-           color: #FFBF00;
+           color: $yellow-300;
        }
    }
    p {

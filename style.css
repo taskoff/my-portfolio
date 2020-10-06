@@ -284,7 +284,7 @@
   position: relative;
   width: 300px;
   height: 430px;
-  border: 2px solid grey;
+  border: 2px solid #525252;
   -webkit-box-shadow: 0 0 5px black;
           box-shadow: 0 0 5px black;
   overflow: hidden;
@@ -429,7 +429,7 @@
   border-radius: 50%;
   background-color: #525252;
   margin-right: 10px;
-  border: 1px solid  #525252;
+  border: 1px solid #525252;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
   cursor: pointer;
@@ -790,6 +790,19 @@ a {
   -ms-grid-rows: 60% 40%;
       grid-template-rows: 60% 40%;
   justify-items: center;
+}
+
+.about-section .img-wrapper .text-info {
+  width: 80%;
+}
+
+.about-section .img-wrapper .text-info h3 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.about-section .img-wrapper .text-info a {
+  color: #525252;
 }
 
 .about-section .img-container {
