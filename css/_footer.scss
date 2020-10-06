@@ -13,9 +13,6 @@
     grid-template-columns: 50% 50%;
     justify-items: center;
     align-items: center;
-    // padding-top: 50px;
-    // align-items: center;
-    
 
     .label-input-container {
         margin-bottom: 10px;
@@ -47,7 +44,7 @@
 
     .footer-form-button {
         display: block;
-        width: 50px;
+        // width: 50px;
         padding: 10px 30px;
         background-color: transparent;
         color:  #F5F5F5;
@@ -61,10 +58,6 @@
             background-color: $yellow-300;
         }
     }
-.contact-wrapper {
-
-    
-}
 
     .icons-wrapper {
         display: flex;
