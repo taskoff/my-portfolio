@@ -23,6 +23,14 @@ body {
      text-decoration: none;
  }
 
+ ul {
+     list-style: none;
+ }
+ button {
+     border: none;
+     outline: none;
+ }
+
  .section {
     margin: 0 30px;
     padding: 30px 20px;
@@ -264,11 +272,12 @@ body {
              display: grid;
              grid-template-columns: 1fr 1fr 1fr 1fr;
             min-height: 200px;
+            position: relative;
             .work-container {
                 position: relative;
                 width: 100%;
                 height: 200px;
-                animation: show 03s;
+                animation: show 0.3s linear;
                 cursor: pointer;
                 &::before {
                     content: '';
@@ -297,6 +306,39 @@ body {
                     transform: scale(1);
                 }
 
+                .description,
+                .close-btn {
+                    
+                    display: none;
+                }
+                .close-btn {
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    padding: 3px 5px;
+                    border: 1px solid $grey-200;
+                    border-radius: 3px;
+                    background-color: $white-200;
+                    transition: background-color 0.3s linear;
+                    &:hover {
+                        background-color: $grey-200;
+                        color: $white-200;
+                    }
+
+                }
+                .description {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    padding: 5px 10px;
+                    display: flex;
+                    width: 100%;
+                    a {
+                        display: none;
+                    }
+                }
                 
                 .search-icon-wrapper {
                     position: absolute;
@@ -319,6 +361,42 @@ body {
                         opacity: 1;
                     }
 
+                }
+
+                &.active {
+                    transform: scale(2.5);
+                    z-index: 1;
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                    width: 30%;
+                    border-radius: 3px;
+                    overflow: hidden;
+                    cursor: auto;
+                    .search-icon-wrapper {
+                        display: none;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                    .description {
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: $grey-200;
+                        color: $white-200;
+                        ul {
+                            display: flex;
+                            li {
+                                margin-right: 10px;
+                            }
+                        }
+                        a {
+                            display: block;
+                        }
+                    }
+                    .close-btn {
+                        display: block;
+                    }
                 }
                
             }

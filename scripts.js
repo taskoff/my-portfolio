@@ -1,12 +1,14 @@
 import { firstSliderInit } from './scripts/slider.js';
 import { checkPosition, addClickListener } from './scripts/categories.js';
-import {host, username, password} from './scripts/email-info.js'
+import {host, username, password} from './scripts/email-info.js';
+import {showWork }from './scripts/show_work.js';
+
 
 
 window.addEventListener('scroll', checkPosition);
 
 firstSliderInit();
-
+showWork()
 const button = document.querySelector('.footer-form-button');
 console.log(button)
 button.addEventListener('click', sendEmail)

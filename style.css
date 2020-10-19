@@ -1117,6 +1117,15 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
 .section {
   margin: 0 30px;
   padding: 30px 20px;
@@ -1393,14 +1402,15 @@ a {
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   min-height: 200px;
+  position: relative;
 }
 
 .my-work-section .work-article .work-wrapper .work-container {
   position: relative;
   width: 100%;
   height: 200px;
-  -webkit-animation: show 03s;
-          animation: show 03s;
+  -webkit-animation: show 0.3s linear;
+          animation: show 0.3s linear;
   cursor: pointer;
 }
 
@@ -1435,6 +1445,45 @@ a {
           transform: scale(1);
 }
 
+.my-work-section .work-article .work-wrapper .work-container .description,
+.my-work-section .work-article .work-wrapper .work-container .close-btn {
+  display: none;
+}
+
+.my-work-section .work-article .work-wrapper .work-container .close-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 3px 5px;
+  border: 1px solid #525252;
+  border-radius: 3px;
+  background-color: #F7F7F7;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+
+.my-work-section .work-article .work-wrapper .work-container .close-btn:hover {
+  background-color: #525252;
+  color: #F7F7F7;
+}
+
+.my-work-section .work-article .work-wrapper .work-container .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.my-work-section .work-article .work-wrapper .work-container .description a {
+  display: none;
+}
+
 .my-work-section .work-article .work-wrapper .work-container .search-icon-wrapper {
   position: absolute;
   font-size: 50px;
@@ -1460,6 +1509,56 @@ a {
 
 .my-work-section .work-article .work-wrapper .work-container .search-icon-wrapper:hover i {
   opacity: 1;
+}
+
+.my-work-section .work-article .work-wrapper .work-container.active {
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
+  z-index: 1;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 30%;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: auto;
+}
+
+.my-work-section .work-article .work-wrapper .work-container.active .search-icon-wrapper {
+  display: none;
+}
+
+.my-work-section .work-article .work-wrapper .work-container.active::before {
+  display: none;
+}
+
+.my-work-section .work-article .work-wrapper .work-container.active .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #525252;
+  color: #F7F7F7;
+}
+
+.my-work-section .work-article .work-wrapper .work-container.active .description ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-work-section .work-article .work-wrapper .work-container.active .description ul li {
+  margin-right: 10px;
+}
+
+.my-work-section .work-article .work-wrapper .work-container.active .description a {
+  display: block;
+}
+
+.my-work-section .work-article .work-wrapper .work-container.active .close-btn {
+  display: block;
 }
 
 .my-work-section .work-article .work-wrapper img {
