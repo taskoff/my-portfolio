@@ -1,7 +1,9 @@
 import { firstSliderInit } from './scripts/slider.js';
 import { checkPosition, addClickListener } from './scripts/categories.js';
-import {host, username, password} from './scripts/email-info.js';
+
+// import {host, username, password} from './scripts/email-info.js';
 import {showWork }from './scripts/show_work.js';
+
 
 
 

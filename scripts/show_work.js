@@ -6,8 +6,14 @@ function showWork() {
     
 }
 
+let isActive = false;
+
 function currentWork(e) {
 
+    if (isActive) {
+        return
+    }
+    isActive = true;
     const el = e.target;
     let parent = '';
     if (el.classList.contains('fa')) {
@@ -21,6 +27,7 @@ function currentWork(e) {
     btn.addEventListener('click', closeWork)
     function closeWork() {
         parent.classList.remove('active');
+        isActive = false;
     }
 }
 
