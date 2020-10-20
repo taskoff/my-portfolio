@@ -114,6 +114,7 @@
         }
         .text-info {
             width: 80%;
+            margin-top: 30px;
             h3 {
                 font-size: 30px;
                 text-align: center;
@@ -121,6 +122,10 @@
             a{
                 color: $grey-200;
 
+            }
+            span {
+                color: $yellow-300;
+                text-shadow: 0 0 1px $grey-200;
             }
         }
         

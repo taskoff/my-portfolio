@@ -522,7 +522,7 @@ summary {
   position: relative;
   width: 100%;
   min-height: 600px;
-  padding-bottom: 30px;
+  padding-top: 80px;
 }
 
 .footer-areas-container {
@@ -853,6 +853,7 @@ summary {
 
 .about-section .img-wrapper .text-info {
   width: 80%;
+  margin-top: 30px;
 }
 
 .about-section .img-wrapper .text-info h3 {
@@ -862,6 +863,11 @@ summary {
 
 .about-section .img-wrapper .text-info a {
   color: #525252;
+}
+
+.about-section .img-wrapper .text-info span {
+  color: #FFBF00;
+  text-shadow: 0 0 1px #525252;
 }
 
 .about-section .img-container {
@@ -1269,8 +1275,6 @@ h3.section-title:after {
   width: 300px;
   height: 420px;
   border: 2px solid #525252;
-  -webkit-box-shadow: 0 0 5px black;
-          box-shadow: 0 0 5px black;
   overflow: hidden;
 }
 
