@@ -13,13 +13,10 @@
 .slider-container {
     position: relative;
     width: 300px;
-    height: 430px;
+    height: 420px;
     border: 2px solid$grey-200;
     box-shadow: 0 0 5px black;
     overflow: hidden;
-    
-
-    
 
     .cert-type {
         position: absolute;
@@ -109,6 +106,9 @@
                 opacity: 0;
                 transition: opacity 0.3s linear;
                 z-index: 1;
+                @include lg {
+                    top: 300px;
+                }
         
                 a {
                     color: white;
@@ -177,12 +177,25 @@
 
 
 // ============================ Responsive Slider =============================
-
-
-@media (max-width:600px) {
+@include xl {
     .slider-container {
-        // width: 250px;
-        // height: 350px;
+        width: 280px;
+        height: 400px;
+        
+    }
+}
+@include lg {
+    .slider-container {
+        width: 240px;
+        height: 340px;
+        
+    }
+}
+
+@include sm {
+    .slider-container {
+        width: 100%;
+        height: 400px;
         &.first {
             .arrow {
                 opacity: 1;
@@ -190,13 +203,15 @@
             .img-box {
                 .link-wrapper {
                     opacity: 1;
+                    top: 350px;
                 }
             }
         }
     }
 }
 
-@media(max-width: 320px){
+// @media(max-width: 320px)
+@include rwd(320){
     .slider-container {
         width: 250px;
         height: 350px;

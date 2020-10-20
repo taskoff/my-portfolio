@@ -60,12 +60,12 @@ function checkPosition(){
 };
 
 function visibleElementsWithPosition(p) {
-    if (p > 400 && p < 900) {
+    if (p > 600 && p < 900) {
         elements.elSkill.forEach(e=>{
             e.classList.add('show')
         })
     }
-    if(p > 1200 && !isShowCategories) {
+    if(p > 1400 && !isShowCategories) {
         showCategory()
     }
 };

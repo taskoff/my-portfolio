@@ -26,9 +26,6 @@ function sendEmail() {
     }
 
     Email.send({
-        // Host : "smtp.mailtrap.io",
-        // Username : "c92115391909c6",
-        // Password : "e3225a3d971abc",
         Host : `${host}`,
         Username : `${username}`,
         Password : `${password}`,

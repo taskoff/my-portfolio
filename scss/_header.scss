@@ -126,11 +126,39 @@
     background-color: $grey-200;
     text-transform: uppercase;
     border-radius: 3px;
+    width: 60px;
+    // margin-top: 20px;
+    // margin-left: 80%;
+}
+
+.go-up {
+    width: 70px;
+    height: 70px;
+    background-color: $grey-200;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: sticky;
+    top: 85%;
+    left: 80%;
+    z-index: 200;
+    display: none;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white-200;
+    }
 }
 
 // =================================== Responsive ====================================
 
-@media (max-width: 600px) {
+
+@include md  {
+    .go-up {
+        display: flex;
+    }
     .nav-toggle-button {
         display: block;
         .close {
