@@ -9,8 +9,8 @@ function showWork() {
 let isActive = false;
 
 function currentWork(e) {
-
-    if (isActive) {
+    
+    if (isActive || window.screen.availWidth < 769) {
         return
     }
     isActive = true;

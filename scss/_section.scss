@@ -132,47 +132,56 @@
     }
     .img-container {
         position: relative;
+        overflow: hidden;
+        transform: rotate(10deg);
         // height: 90%;
        
-        .arrow {
-            position: absolute;
-            width: 0; 
-            height: 0; 
-            border-top: 40px solid transparent;
-            border-bottom: 40px solid transparent;
-            border-left: 40px solid $white-200;
+        // .arrow {
+        //     position: absolute;
+        //     width: 0; 
+        //     height: 0; 
+        //     border-top: 40px solid transparent;
+        //     border-bottom: 40px solid transparent;
+        //     border-left: 40px solid $white-200;
 
-            &.left-top {
-                transform: rotate(225deg);
-                top: -28px;
-                left:-8px;
-            }
+        //     &.left-top {
+        //         transform: rotate(225deg);
+        //         top: -28px;
+        //         left:-8px;
+        //     }
 
-            &.right-top {
-                transform: rotate(-45deg);
-                top: -28px;
-                right:-8px;
-            }
-            &.right-bottom {
-                transform: rotate(45deg);
-                bottom: -28px;
-                right: -8px;
-            }
-            &.left-bottom {
-                transform: rotate(135deg);
-                bottom: -28px;
-                left: -8px;
-            }
-        }
+        //     &.right-top {
+        //         transform: rotate(-45deg);
+        //         top: -28px;
+        //         right:-8px;
+        //     }
+        //     &.right-bottom {
+        //         transform: rotate(45deg);
+        //         bottom: -28px;
+        //         right: -8px;
+        //     }
+        //     &.left-bottom {
+        //         transform: rotate(135deg);
+        //         bottom: -28px;
+        //         left: -8px;
+        //     }
+        // }
        
     }
     
     .img-container::before {
         display: block;
         content: '';
-        width: 280px;
+        width: 200px;
+        height: 100%;
         padding-top: 100%;
         overflow: hidden;
+        // transform: rotate(-10deg);
+        border: 2px solid $grey-200;
+        position: relative;
+        // z-index: 2;
+        background-image: url('../images/profile2.jpg');
+        background-size: cover;
         @include lg {
             width: 200px;
             height: auto;
@@ -310,8 +319,14 @@
                 }
 
                 &:hover::before {
-                    opacity: 0.5;
+                    opacity: 0.7;
                 }
+                &:hover .search-icon-wrapper {
+                    
+                        opacity: 1;
+                    
+                }
+
                 
                 &.hidden{
                     display:none;
@@ -350,11 +365,21 @@
                     position: absolute;
                     bottom: 0;
                     left: 0;
+                    display: flex;
+                    justify-content: space-between;
                     padding: 5px 10px;
                     display: flex;
                     width: 100%;
+                    min-height: 70px;
                     a {
                         display: none;
+                        // background-color: $grey-200;
+                        padding: 2px 3px;
+                        color: $red-600;
+                        text-shadow: 0 0 10px white;
+                        @include md {
+                            display: flex;
+                        }
                     }
                 }
                 
@@ -366,17 +391,15 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    opacity: 0;
+                    @include md {
+                        display: none;
+                    }
                    
                     i {
                         color:$grey-200;
-                        opacity: 0;
+                        // opacity: 0;
                         transition: opacity 0.3s linear;
-                    }
-
-                   
-
-                    &:hover i{
-                        opacity: 1;
                     }
 
                 }
@@ -397,13 +420,19 @@
                     &::before {
                         display: none;
                     }
+                                      
+
                     .description {
                         display: flex;
                         justify-content: space-between;
                         background-color: $grey-200;
                         color: $white-200;
+                        opacity: 0.8;
                         ul {
-                            display: flex;
+                            // display: flex;
+                            @include md {
+                                display: block;
+                            }
                             li {
                                 margin-right: 10px;
                             }
@@ -411,6 +440,7 @@
                         a {
                             display: block;
                         }
+                        
                     }
                     .close-btn {
                         display: block;
