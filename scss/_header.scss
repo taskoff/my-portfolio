@@ -56,9 +56,9 @@
 
 .title-wrapper {
    position: absolute;
-   top: 50%;
+   top: 40%;
    left: 50%;
-   transform: translate(-50%, -50%);
+   transform: translate(-50%, -40%);
    color: #F5F5F5;
    text-align: center;
    h2 {
@@ -109,22 +109,28 @@
        transition: transform 0.5s linear;
    }
    a {
+       margin-top: 10px;
        text-decoration: none;
-       color: white;
+    //    color: white;
+        color: $grey-200;
        font-size: 20px;
-       border: 2px solid white;
+    //    text-shadow: 0 0 2px black;
        padding: 10px;
        border-radius: 3px;
-       background-color: transparent;
+       background-color: #e0a800;
        transition: background-color 0.3s ease-in;
+       transition: color 0.2s linear;
+
 
        &:hover i{
            transform: rotate(90deg);
            
        }
        &:hover {
-           background-color:#e0a800;
-
+           background-color: transparent;
+           box-shadow:  0 0 2px $white-200;
+           color: $white-200;
+        //    border: 2px solid white;
        }
    }
 

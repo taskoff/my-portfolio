@@ -109,8 +109,18 @@
         display: grid;
         grid-template-rows: 60% 40%;
         justify-items: center;
+        
         @include lg {
            grid-template-rows: 1fr 1fr;
+        }
+        @include md {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding: 30px 30px 0 30px;
+        }
+        @include sm {
+            grid-column-start: 1;
+            grid-column-end: 2;
         }
         .text-info {
             width: 80%;
@@ -134,6 +144,10 @@
         position: relative;
         overflow: hidden;
         transform: rotate(10deg);
+        @include md {
+            transform: rotate(0deg);
+        }
+        
         // height: 90%;
        
         // .arrow {
