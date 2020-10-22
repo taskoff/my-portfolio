@@ -1,11 +1,13 @@
 function firstSliderInit() {
 
+
     const elements = {
         images: document.querySelectorAll('.first .img-box'),
         leftArrow : document.querySelector('.first .arrow.left'),
         rightArrow : document.querySelector('.first .arrow.right'),
         
     }
+    let isClick = false;
     let activeId = 0;
     const activeEl = elements.images[0];
     activeEl.classList.add('active');
@@ -14,6 +16,7 @@ function firstSliderInit() {
     elements.leftArrow.addEventListener('click', showPreviousImg);
 
     function showPreviousImg() {
+        isClick = true;
         if(activeId>0) {
             moveImg('-')
         }
@@ -22,6 +25,7 @@ function firstSliderInit() {
     elements.rightArrow.addEventListener('click', showNextImg);
 
     function showNextImg() {
+        isClick = true;
         if(activeId<elements.images.length-1) {
             moveImg('+')
         }
@@ -96,6 +100,13 @@ function firstSliderInit() {
         }
         
     }
+
+    // function autoSlide() {
+    //     if (!isClick){
+    //         setInterval(()=>{moveImg('+')}, 5000)
+    //     }
+    // }
+    // autoSlide();
 
 };
 

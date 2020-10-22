@@ -65,9 +65,21 @@ function visibleElementsWithPosition(p) {
             e.classList.add('show')
         })
     }
-    if(p > 1400 && !isShowCategories) {
-        showCategory()
+
+    if (window.screen.availWidth < 500) {
+        if (p > 2600 && !isShowCategories) {
+            showCategory()
+        }
+    } else if (window.screen.availWidth < 769) {
+        if (p > 1900 && !isShowCategories) {
+            showCategory()
+        }
+    } else if (window.screen.availWidth > 769) {
+        if (p > 1600 && !isShowCategories) {
+            showCategory()
+        }
     }
+
 };
 
 export {
