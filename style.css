@@ -737,12 +737,13 @@ summary {
 .section {
   margin: 0 30px;
   padding: 30px 20px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
   border-radius: 10px;
 }
 
 .about-section {
   background-color: #F7F7F7;
+  padding-bottom: 100px;
 }
 
 .about-section .about-article {
