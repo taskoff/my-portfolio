@@ -41,13 +41,15 @@ function firstSliderInit() {
 
         setTimeout(()=>{
             if(p === '-'){
-                elements.images[activeId-1].classList.add(activeClass);
-                elements.images[activeId-1].classList.remove(hiddenClass);
+                // elements.images[activeId-1].classList.add(activeClass);
+                // elements.images[activeId-1].classList.remove(hiddenClass);
+                addActiveClass(activeId-1);
     
                 activeId -=1;
             } else if (p === '+') {
-                elements.images[activeId+1].classList.add(activeClass);
-                elements.images[activeId+1].classList.remove(hiddenClass);
+                // elements.images[activeId+1].classList.add(activeClass);
+                // elements.images[activeId+1].classList.remove(hiddenClass);
+                addActiveClass(activeId+1);
     
                 activeId +=1;
             }
@@ -101,10 +103,14 @@ function firstSliderInit() {
             const bullets = document.querySelectorAll('.bullets-container-first .bullet');
 
             bullets[activeId].classList.remove(activeClass);
-            elements.images[activeId].classList.remove(activeClass);
+            // elements.images[activeId].classList.remove(activeClass);
+            // elements.images[activeId].classList.add(hiddenClass);
+            removeActiveClass(activeId);
+            
             activeId = Number(id);
-            elements.images[activeId].classList.add(activeClass);
-
+            // elements.images[activeId].classList.add(activeClass);
+            // elements.images[activeId].classList.remove(hiddenClass);
+            addActiveClass(activeId);
 
             el.classList.add(activeClass);
 
@@ -113,12 +119,16 @@ function firstSliderInit() {
         
     }
 
-    // function autoSlide() {
-    //     if (!isClick){
-    //         setInterval(()=>{moveImg('+')}, 5000)
-    //     }
-    // }
-    // autoSlide();
+    function addActiveClass(actId){
+            elements.images[actId].classList.add(activeClass);
+            elements.images[actId].classList.remove(hiddenClass);
+            console.log(elements.images[actId])
+    }
+    function removeActiveClass(actId){
+        elements.images[actId].classList.remove(activeClass);
+        elements.images[actId].classList.add(hiddenClass);
+}
+
 
 };
 
