@@ -969,6 +969,12 @@ summary {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .midle-section {
+    margin: 0 0;
+  }
+}
+
 .midle-section .add-wrapper {
   height: 100%;
   width: 80%;
@@ -986,11 +992,27 @@ summary {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  .midle-section .add-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
 .midle-section .add-wrapper p {
   font-size: 25px;
   font-weight: 700;
   color: #F2F2F2;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .midle-section .add-wrapper p:nth-child(2), .midle-section .add-wrapper p:last-child {
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
 }
 
 .my-work-section {

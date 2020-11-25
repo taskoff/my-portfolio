@@ -221,6 +221,9 @@
     height: 200px;
     margin: 0 30px;
     position: relative;
+    @include md {
+       margin: 0 0;
+    }
     .add-wrapper {
         height: 100%;
         width: 80%;
@@ -229,12 +232,27 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+         @include md {
+             display: grid;
+             grid-template-columns: 1fr 1fr;
+           
+         }
+
+
 
         p {
             font-size: 25px;
             font-weight: 700;
             color: $white-100;
             text-transform: uppercase;
+            @include md {
+                &:nth-child(2),
+                &:last-child {
+                    justify-self: right;
+                }
+              
+            }
+                      
         }
     }
 }
