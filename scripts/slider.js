@@ -10,8 +10,12 @@ function firstSliderInit() {
     let isClick = false;
     let activeId = 0;
     const activeEl = elements.images[0];
-    activeEl.classList.add('active');
     const activeClass = 'active';
+    const hiddenClass = 'hidden';
+    activeEl.classList.add(activeClass);
+    activeEl.classList.remove(hiddenClass);
+
+    
     
     elements.leftArrow.addEventListener('click', showPreviousImg);
 
@@ -33,15 +37,23 @@ function firstSliderInit() {
 
     function moveImg(p) {
         elements.images[activeId].classList.remove(activeClass);
+        elements.images[activeId].classList.add(hiddenClass);
 
-        if(p === '-'){
-            elements.images[activeId-1].classList.add(activeClass);
-            activeId -=1;
-        } else if (p === '+') {
-            elements.images[activeId+1].classList.add(activeClass);
-            activeId +=1;
-        }
-        checkArrowShow();
+        setTimeout(()=>{
+            if(p === '-'){
+                elements.images[activeId-1].classList.add(activeClass);
+                elements.images[activeId-1].classList.remove(hiddenClass);
+    
+                activeId -=1;
+            } else if (p === '+') {
+                elements.images[activeId+1].classList.add(activeClass);
+                elements.images[activeId+1].classList.remove(hiddenClass);
+    
+                activeId +=1;
+            }
+
+            checkArrowShow();
+        }, 800)
     }
 
     function checkArrowShow() {

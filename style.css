@@ -1396,13 +1396,16 @@ h3.section-title:after {
 
 .slider-container.first .img-box {
   position: relative;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.8s;
+  transition: opacity 0.8s;
 }
 
 .slider-container.first .img-box.active {
   opacity: 1;
+}
+
+.slider-container.first .img-box.hidden {
+  opacity: 0;
 }
 
 .slider-container.first .img-box .link-wrapper {
@@ -1513,7 +1516,7 @@ h3.section-title:after {
 @media (max-width: 768px) {
   .slider-container.first .img-box .link-wrapper {
     opacity: 1;
-    top: 300px;
+    top: 330px;
   }
   .slider-container.first .arrow {
     opacity: 1;
